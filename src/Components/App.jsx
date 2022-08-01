@@ -27,7 +27,7 @@ function App({menu}) {
         <Routes>
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/Employee" element={<FetchApi/>}></Route>
-          <Route exact path="/Detail" element={<Details/>}></Route>
+          <Route exact path="/Details" element={<Details/>}></Route>
           <Route exact path="/Contact" element={<Contect/>}></Route>
           <Route exact path="/About" element={<About/>}></Route>
         </Routes>
