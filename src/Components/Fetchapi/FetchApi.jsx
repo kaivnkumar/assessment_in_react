@@ -24,8 +24,8 @@ function FetchApi() {
   return (
     <div>
         <div>
-            <input type="text" onChange={(e) => setsearchCharacter(e.target.value)} placeholder="search a Chracter"></input>
-            <button onClick={() => searchPerson()}>search</button>
+            <br /><input type="text" onChange={(e) => setsearchCharacter(e.target.value)} placeholder="search a Chracter"></input>
+            <button onClick={() => searchPerson()}>search</button><br /><br />
         </div>
         <div className='Content'>
         {
@@ -39,6 +39,7 @@ function FetchApi() {
                             <p>{object.gender}</p>
                             <p>{object.phone}</p>
                             <p>{object.email}</p>
+                            <p>Salary : $100000</p>
                         </div>
                     </div>
                 </div>
