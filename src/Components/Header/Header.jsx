@@ -12,11 +12,9 @@ import Contect from './Contact/Contect'
 
 import About from './About/About'
 
-import './style/App.css';
-
-function App({menu}) {
+function Header({menu}) {
   return (
-    <div>
+    <div className='main-nav'>
     {
       <BrowserRouter>
         {
@@ -34,8 +32,7 @@ function App({menu}) {
       </BrowserRouter>
     }
     </div>
-    
   )
 }
 
-export default App
+export default Header
