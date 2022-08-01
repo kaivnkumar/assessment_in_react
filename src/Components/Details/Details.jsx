@@ -25,9 +25,9 @@ function Details() {
     <>
         <div>
             <br /><label >Enter the Name of The Employee</label>
-            <input type="text" onChange={(e) => setsearchCharacter(e.target.value)} placeholder="search a Chracter"></input><br /><br />
+            <input type="text" onChange={(e) => setsearchCharacter(e.target.value)} placeholder="Name"></input><br /><br />
             <label >Enter the expenditure of The Employee</label>
-            <input type="text" onChange={(e) => setExpenditure(e.target.value)} placeholder="search a Chracter"></input><br /><br />
+            <input type="text" onChange={(e) => setExpenditure(e.target.value)} placeholder="Amount"></input><br /><br />
             <button onClick={() => searchPerson()}>Get Details</button><br /><br />
         </div>
         <div className='Content'>
