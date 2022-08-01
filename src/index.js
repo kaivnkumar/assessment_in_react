@@ -8,4 +8,4 @@ let rootEle = document.getElementById('root');
 
 let root = ReactDOM.createRoot(rootEle);
 
-root.render(<App/>);
+root.render(<App menu={['Home','Employee','Details','Contact','About']}/>);
