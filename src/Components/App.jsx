@@ -14,9 +14,11 @@ import About from './About/About'
 
 import './style/App.css';
 
+import './images/logo.JPEG'
+
 function App({menu}) {
   return (
-    <div>
+    <div className='main-container'>
     {
       <BrowserRouter>
         {
@@ -24,6 +26,7 @@ function App({menu}) {
             <Link to={item}>{item}</Link>
           ))
         }
+        <img src="./images/logo.JPEG" />
         <Routes>
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/Employee" element={<FetchApi/>}></Route>

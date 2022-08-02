@@ -22,17 +22,19 @@ function FetchApi() {
         localStorage.setItem('details',JSON.stringify(searchedData));
     }
   return (
-    <div>
-        <div>
-            <br /><input type="text" onChange={(e) => setsearchCharacter(e.target.value)} placeholder="search a Chracter"></input>
-            <button onClick={() => searchPerson()}>search</button><br /><br />
+    <div className='main-content'>
+        <div className='search-bar'>
+            <input type="text" onChange={(e) => setsearchCharacter(e.target.value)} placeholder="search a Chracter..." className='input-box'></input>
+            <button onClick={() => searchPerson()}>search</button>
         </div>
         <div className='Content'>
         {
             (details.length > 0) && details.map((object,index)=>(
                 <div className='employees' key={index}>
                     <div class="card">
-                        <img src={object.picture.large} />
+                        <div>
+                            <img src={object.picture.large} />
+                        </div>
                         <div class="container">
                             <h4><b>{object.name.first}</b></h4>
                             <p>{object.dob.date}</p>
