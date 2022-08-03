@@ -1,5 +1,6 @@
 .main-content {
     background-color: rgb(106 114 114);
+    height: 1350px;
 }
 .Content {
     display: flex;
@@ -51,6 +52,8 @@
     box-shadow: 0 8px 16px 0 rgba(252, 241, 241, 0.926);
 }
 .container {
+    margin-top: 30px;
+    line-height: 30px;
     padding: 2px 16px;
 }
 img {
