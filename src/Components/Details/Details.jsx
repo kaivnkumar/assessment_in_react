@@ -4,15 +4,23 @@ function Details() {
     const [details, setDetails] = useState(JSON.parse(localStorage.getItem('personData')||"[]"));
     const [searchCharacter, setsearchCharacter] = useState("");
     const [expenditure, setExpenditure] = useState("")
-    useEffect(()=> {
-        fetch('https://randomuser.me/api/?results=10')
-            .then((info) => {
-                info.json().then((details) => {
-                    setDetails(details.results);
-                    localStorage.setItem('personInfo',JSON.stringify(details.results))
+    useEffect(async ()=> {
+        // fetch('https://randomuser.me/api/?results=10')
+        //     .then((info) => {
+        //         info.json().then((details) => {
+        //             setDetails(details.results);
+        //             localStorage.setItem('personInfo',JSON.stringify(details.results))
 
-                })
-            });
+        //         })
+        //     });
+
+        let data = await fetch('https://randomuser.me/api/?results=10') 
+         let details=await data.json();
+         localStorage.setItem('personInfo',JSON.stringify(details.results))
+         console.log(details);
+         
+            
+
         },[]
     );
     const searchPerson =() =>{
@@ -42,7 +50,7 @@ function Details() {
                             <p>{object.gender}</p>
                             <p>{object.phone}</p>
                             <p>{object.email}</p>
-                            <p>Credit:${100000-expenditure}</p>
+                            <p>Balance:${100000-expenditure}</p>
                         </div>
                     </div>
                 </div>
